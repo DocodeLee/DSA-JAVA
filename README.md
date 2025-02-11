@@ -46,4 +46,12 @@ There is no way to modify the made Array
 
 >Count Odd element > make a new Array with odd_size > put the only need elements
 <img width="300" alt="image" src="https://github.com/user-attachments/assets/7c548aca-ad31-4c1f-99d4-fb4437845afc" />
+## How to reverse Array
+I thought make a new list and iterate from the last index
+
+but we can just change using temp int
+
+>activate new int value temp > change [start] [end] > change end with temp value > start++, end--
+<img width="463" alt="image" src="https://github.com/user-attachments/assets/a4ff0910-8817-49c7-b9f7-eb7bc4ed14b7" />
+## Find min value in Array
 
