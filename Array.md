@@ -43,3 +43,23 @@ but we can just change using temp int
 > iterate array 
 > update if you find smaller value ::: if( min > array[i]) {min = array[i];}
 > return the updated min ::: return min;
+
+## Find second maximum value in Array
+> declare two int value 1.maximum 2. secondMaximum
+> Iterate the number
+> if number is bigger than maximum > update it with bigger and bigger becomes second
+> YOU NEED TO CONSIDER IF THE VALUE IS BETWEEN MAX AND SECOND, ::: else if (arr[i] > secMax && arr[i] < Max)
+> after it finish
+> return secondMax
+
+## Move all zeros to the end of Array
+We will get int Array and wants to send 0 to end of array
+
+>> I thought we need sort() and need to use temp as main but it wasn't
+
+> First declare pointer 1 > this is the setted until the condition changed
+> iterate the array
+> exchange if pointer1 is 0 and array value is not 0 (when change, use int temp)
+> and in other condition : increase pointer 1 when it is not 0
+
+There is no statement for sortion so just finish the code in here
