@@ -77,3 +77,22 @@ previous = current; >> by this previous is always on the previous node
 current = current.next 
 
 when loop ends > previous.next = null; ->> return current;
+
+## Delete a node in given Position
+
+if position is less than 0 or bigger than length return null;
+
+if position is 1 > return head
+
+if posiiton is k :
+
+declare current on head and previous as null (pointer)
+
+declare count as 1 and count++ moving current to current.next previous on current
+
+move until k and just connect previous.next = current.next
+
+then current.next = null and return current;
+
+> You don't need to move two pointer from the first we know current will be next of previous so just declare aafter movement
+
