@@ -49,3 +49,31 @@ call the previous Node on head and declare count value to check
 if previous moves to the ( posiiton -1 ) set current on previous.next
 
 newNode.next = current; && previous.next = newNode; 
+
+## Delete head Node in Singly Linked List
+
+if head is null return null
+
+declare temp Node on temp
+
+move head to next and set temp.next = null
+
+then return temp
+
+## Delete last Node in Singly Linked List
+
+if( head == null || head.next == null) > return head;
+
+set Current on the head and make pointer Previous
+
+ListNode current = head;
+
+ListNode previous = null;
+
+while(current.next != null)
+
+previous = current; >> by this previous is always on the previous node
+
+current = current.next 
+
+when loop ends > previous.next = null; ->> return current;
