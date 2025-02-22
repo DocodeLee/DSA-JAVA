@@ -144,4 +144,62 @@ We need to use else for edge case because we are using while loop so it still go
 6. temp.next = new Node;
 7. return head ::: return the List
 
-## How to remove a given key from singly linked list in java
+## How to remove a given value from singly linked list in java
+1. set current as pointer on the head  :: ListNode current = head;
+2. set temp as null pointer :: ListNode temp = null;
+3. move current until null and it is not match with value :: while(current != null && current.data != value)
+4. each step move temp to current, current moves to next :: temp = current; current = current.next;
+5. if in array there were no same value return;
+6. if found temp.next = current.next; (temp is currently on the previous of current Node)
+<img width="843" alt="image" src="https://github.com/user-attachments/assets/22668d5f-8fd3-4643-b8ae-c33882299e30" />
+
+## How to dectec a loop in a sinlgly linked list
+
+### In this problem we need to use two pointer which has different speed;
+
+1. ListNode fast = head;
+2. ListNode slow = head;
+3. move fast until fast will be null :: while( fast != null && fast.next !=null)
+fast = fast.next.next; // move two steps
+
+slow = slow.next;
+4. if(fast == slow){ return true}
+5. or false;;
+
+## How to find a start of loop in singly linked list
+### This is to find a start point of the loop
+
+first part is same 
+
+set fast and slow > move fast and step with different speed > if (fast == slow) part appears
+
+return getStartingNode(slow);
+
+### Make a method 
+private ListNode getStartingNode(ListNode slow)
+
+set the temp node on head > move temp and slow until temp meet slow > if meet return temp
+
+<img width="883" alt="image" src="https://github.com/user-attachments/assets/57b2dcb8-6816-4880-a11f-810c845b1d23" />
+<img width="1036" alt="image" src="https://github.com/user-attachments/assets/fb8b6bb4-e6e4-48e7-a69f-4c7180fc500f" />
+<img width="475" alt="image" src="https://github.com/user-attachments/assets/cf0178f7-4b90-4ebb-ae8f-de0b957a3196" />
+
+Regardless of length of array, the slow pointer will meet fast in the kth node of loop and r will be left
+
+and this r is the always same with m length. so if temp starts from the head to node slow will move few rotations + r distance
+
+## How to remove loop
+Same unitl detecting loop.
+
+if detect find the head of loop and finally set slow.next =null;
+
+## Merge two sorted signly linked list
+1. declare dummyNode with random value > dummy.next will be the head
+2. set the tail on the dummyNode
+3. compare a.data and b.data if a is smaller > connect tail to a , if b is smaller, connect tail to be
+4. move each part to next
+5. tail = tail.next << update tail to the last Node
+6. if one list over jsut move tail to another one
+7. return dummy.next becasue dummy is not the member of linkedList
+
+## Add two singly linked list 9:22
